@@ -44,3 +44,19 @@ randomBtn.addEventListener('click', function () {
     // // info.textContent = review.text;
     // info.innerHTML = review.text;
 });
+// show next person
+nextBtn.addEventListener('click', function () {
+    currentItem++;
+    if (currentItem > reviews.length - 1) {
+        currentItem = 0;
+    }
+    showReview(currentItem);
+});
+// show prev person
+prevBtn.addEventListener('click', function () {
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+    }
+    showReview(currentItem);
+});
